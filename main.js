@@ -67,7 +67,7 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
     Typed Js 
 ====================== */
 const typed = new Typed(".multiple-text", {
-  strings: ["Em bé", "Xinh Đẹp",],
+  strings: ["2019", "2020","2021","2022","2023","2024",],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -81,18 +81,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function updateDaysCounter() {
-  var startDate = new Date('2019-01-03');
+  var startDate = new Date('2019-3-1');
   var now = new Date();
 
   var timeDiff = Math.abs(now.getTime() - startDate.getTime());
   var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
 
   var daysCounterElement = document.getElementById('clocktoday');
-  daysCounterElement.textContent = 'Số ngày kể từ 1/3/2019 đến hiện tại là: ';
+  daysCounterElement.textContent = 'Số ngày kể từ 1/3/2019: ';
   
   // Thêm màu đỏ cho diffDays
   var diffDaysSpan = document.createElement('span');
   diffDaysSpan.textContent = diffDays + ' ngày';
+  
   diffDaysSpan.style.color = 'var(--main-color)';
   daysCounterElement.appendChild(diffDaysSpan);
 } 
