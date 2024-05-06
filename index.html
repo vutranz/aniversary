@@ -65,9 +65,24 @@
         
        
 
-        <audio controls autoplay loop style="margin-left: 1px">
+        <audio controls id="myAudio" style="margin-left: 1px">
           <source src="music/ChungTaCuaTuongLai-SonTungMTP-14032595 (mp3cut.net).mp3" type="audio/mpeg">
         </audio>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("myAudio");
+          
+            // Kiểm tra nếu âm thanh chưa được phát
+            if (!localStorage.getItem('audioPlayed')) {
+              // Phát âm thanh
+              audio.play();
+            
+              // Đánh dấu là âm thanh đã được phát
+              localStorage.setItem('audioPlayed', true);
+            }
+          });
+          </script>
         
         
       
